@@ -1,0 +1,127 @@
+$color-main: #5858b9;
+$color-second: #343baa;
+$color-dark: #1f1172;
+$color-alert: #ff00ba;
+$color-light: #f0beff;
+$hand: url("../images/hand.svg");
+$transoform-center: translate(-50%, -50%);
+$bold: bold;
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.bg-main {
+  background-color: $color-main;
+}
+.wheel {
+  width: 542px;
+  height: 549px;
+  position: relative;
+  .hand {
+    position: absolute;
+    width: 130px;
+    height: 211px;
+    top: 23.5%;
+    left: 38%;
+    z-index: 5;
+    transform-origin: center 69%;
+    background-image: $hand;
+    background-repeat: no-repeat;
+  }
+  .press {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background-color: $color-dark;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: $transoform-center;
+    z-index: 10;
+    color: $color-alert;
+    font-weight: $bold;
+    font-size: 1.5rem;
+  }
+  .rink {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    max-width: 100%;
+    min-width: 545px;
+  }
+  .innerWheel {
+    width: 98%;
+    height: 98%;
+    min-width: 540px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: $transoform-center;
+    overflow: hidden;
+
+    .sector {
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      transform-origin: left bottom;
+      &:nth-child(2n + 1) {
+        background-color: $color-light;
+        .material-icons,
+        .prize-text {
+          color: $color-second;
+        }
+      }
+      &:nth-child(2n) {
+        background-color: $color-second;
+        .material-icons,
+        .prize-text {
+          color: $color-light;
+        }
+      }
+      &.active {
+        background-color: $color-alert;
+        color: white;
+      }
+    }
+    .content {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .material-icons {
+        font-size: 4rem;
+      }
+      .prize-text {
+        font-size: 2rem;
+        font-weight: $bold;
+      }
+    }
+  }
+}
+.announce {
+  background-color: $color-second;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  .well-done {
+    font-size: 72px;
+  }
+  .free {
+    font-size: 32px;
+  }
+  .prize {
+    color: $color-alert;
+    text-decoration: underline;
+    font-size: 72px;
+  }
+}
+.bg-all {
+  position: relative;
+}

@@ -1,0 +1,153 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.bg-main {
+  background-color: #5858b9;
+}
+
+.wheel {
+  width: 542px;
+  height: 549px;
+  position: relative;
+}
+
+.wheel .hand {
+  position: absolute;
+  width: 130px;
+  height: 211px;
+  top: 23.5%;
+  left: 38%;
+  z-index: 5;
+  -webkit-transform-origin: center 69%;
+          transform-origin: center 69%;
+  background-image: url("../images/hand.svg");
+  background-repeat: no-repeat;
+}
+
+.wheel .press {
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  background-color: #1f1172;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #ff00ba;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.wheel .rink {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  max-width: 100%;
+  min-width: 545px;
+}
+
+.wheel .innerWheel {
+  width: 98%;
+  height: 98%;
+  min-width: 540px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.wheel .innerWheel .sector {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.wheel .innerWheel .sector:nth-child(2n + 1) {
+  background-color: #f0beff;
+}
+
+.wheel .innerWheel .sector:nth-child(2n + 1) .material-icons,
+.wheel .innerWheel .sector:nth-child(2n + 1) .prize-text {
+  color: #343baa;
+}
+
+.wheel .innerWheel .sector:nth-child(2n) {
+  background-color: #343baa;
+}
+
+.wheel .innerWheel .sector:nth-child(2n) .material-icons,
+.wheel .innerWheel .sector:nth-child(2n) .prize-text {
+  color: #f0beff;
+}
+
+.wheel .innerWheel .sector.active {
+  background-color: #ff00ba;
+  color: white;
+}
+
+.wheel .innerWheel .content {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wheel .innerWheel .content .material-icons {
+  font-size: 4rem;
+}
+
+.wheel .innerWheel .content .prize-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.announce {
+  background-color: #343baa;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.announce .well-done {
+  font-size: 72px;
+}
+
+.announce .free {
+  font-size: 32px;
+}
+
+.announce .prize {
+  color: #ff00ba;
+  text-decoration: underline;
+  font-size: 72px;
+}
+
+.bg-all {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

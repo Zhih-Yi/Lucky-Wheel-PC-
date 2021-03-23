@@ -1,0 +1,38 @@
+    [ {
+        "id": 1,
+        "prize": "Movie",
+        "number": "0",
+        "icon":"movie_filter"
+    },
+    {
+        "id": 2,
+        "prize": "Wish",
+        "number": "5",
+        "icon":"cake"
+    },
+    {
+        "id": 3,
+        "prize": "Anything",
+        "number": "5",
+        "icon":"stars"
+    }, 
+     {
+        "id": 4,
+        "prize": "Child",
+        "number": "4",
+        "icon":"child_care"
+    },
+      
+    {
+            "id": 5,
+            "prize": "Flight",
+            "number": "1", 
+            "icon":"flight"
+        },
+        {
+            "id": 6,
+            "prize": "Wifi",
+            "number": "5",
+            "icon":"wifi"
+        }
+    ]
