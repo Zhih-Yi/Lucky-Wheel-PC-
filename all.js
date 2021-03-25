@@ -11,6 +11,7 @@ total1:20,//2017抽獎總數
 total2:120,//2018抽獎總數
 showPrize:false,//顯示中獎文字
 transitionTime:'6s',//指針旋轉動畫秒數
+clickable:true
 },
 methods: {
 //繪出畫面扇形(處理扇型(6面及20面))
@@ -51,6 +52,10 @@ let num = Math.floor((Math.random() * total)/(total/index.length));
 return index[num];
 },
 getPrize(){
+
+if(this.clickable===false)return;
+
+this.clickable=false;
 //指針旋轉
 this.transitionTime="6s";
 let current =this.display;
@@ -117,8 +122,9 @@ setTimeout(function(){
         vm.prize1[random].number -= 1
         }
     }
-    
-},6000)      
+    vm.clickable=true; 
+},6000) 
+  
 },
 //重新開始
 reset(){
